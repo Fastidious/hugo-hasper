@@ -1,0 +1,43 @@
+{{$baseurl := .Site.BaseURL}}
+
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  {{partial "head/includes.html" .}}
+</head>
+<body class="nav-closed">
+
+  {{partial "navigation.html" .}}
+
+  <div class="site-wrapper">
+
+    {{partial "covers/post.html" .}}
+
+  <main class="content" role="main">
+      <article class="post {{ .Section }}">
+      <h1 class="post-title">{{.Title}}</h1>
+      <small>{{.Description}}</small>
+      <section class="post-content">
+        {{.Content}}
+      </section>
+        {{$test := .Site.Pages.GroupBy "Section"}}
+	{{range where $test "Key" "post"}}
+	  {{range .Pages.GroupByDate "2006" "desc"}}
+          <section class="date-list">
+            <h4>{{.Key}}</h4>
+            <ul>
+              {{range where .Pages "Section" "post"}}
+              <li>
+                <a href="{{.Permalink}}">{{.Title}}</a> &mdash; {{.Date.Format "Jan 2"}}
+              </li>
+              {{end}}
+            </ul>
+          </section>
+	  {{end}}
+	{{end}}
+      <footer class="post-footer">
+
+      </footer>
+    </article>
+  </main>
+{{partial "footer.html" .}}
