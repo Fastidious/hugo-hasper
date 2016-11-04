@@ -198,7 +198,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Merriweather", serif;
+    font-family: 'Open Sans',sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -572,10 +572,10 @@ body.nav-opened .nav-cover {
                         opacity 0.3s ease 0.7s;
             transition: transform 0.5s ease,
                         opacity 0.3s ease 0.7s;
-font-family: "Open Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-font-weight: 700;
-font-size: 11px;
-color: #909090;
+//font-family: "Open Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+//font-weight: 700;
+//font-size: 11px;
+//color: #909090;
 }
 
 body.nav-closed .nav {
@@ -895,7 +895,7 @@ body.nav-opened .menu-button .word {
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    font-family: "Open Sans", serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -1356,7 +1356,7 @@ body:not(.post-template) .post-title {
 /* Location, website, and link */
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Merriweather", serif;
+    font-family: "Open Sans", serif;
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
