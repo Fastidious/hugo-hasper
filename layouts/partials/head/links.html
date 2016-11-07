@@ -7,21 +7,10 @@
       href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata"
 />
 
-{{if .Site.Params.RSSLink}}
-<link href="{{.Site.Params.RSSLink}}" rel="alternate"
-      type="application/rss+xml" title="{{.Site.Title}}"
-/>
-{{else if ne .URL "/"}}
-<link href="{{.Site.BaseURL}}index.xml" rel="alternate"
-      type="application/rss+xml" title="{{.Site.Title}}"
-/>
-{{end}}
-
-{{if .IsNode}}
-<link href="{{.RSSLink}}" rel="alternate" type="application/rss+xml"
-      title="{{if ne .URL "/"}}{{.Title}} &middot; {{end}}{{.Site.Title}}"
-/>
-{{end}}
+{{ if .Site.RSSLink }}
+  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
 
 {{.Hugo.Generator}}
 

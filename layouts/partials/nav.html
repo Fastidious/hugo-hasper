@@ -1,4 +1,3 @@
-{{$rss_link := or .Site.Params.RSSLink .RSSLink}}
 <nav class="main-nav overlay clearfix">
 {{if .Site.Params.logo}}
  <a class="blog-logo" href="/">
@@ -8,8 +7,8 @@
 
 {{partial "social.html" .}}
 
-{{if $rss_link}}
- <a class="menu-button icon-feed" href="{{$rss_link}}">
+{{if .Site.RSSLink}}
+ <a class="menu-button icon-feed" type="application/rss+xml" target="_blank" href="{{.Site.RSSLink}}" >
   
  </a>
 {{end}}
