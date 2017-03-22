@@ -9,7 +9,7 @@
   {{partial "navigation.html" .}}
 
   <div class="site-wrapper">
-  {{$coverImage := or .Params.cover .Site.Params.authorCover .Site.Params.cover}}
+  {{$coverImage := or .Params.cover .Site.Params.authorcover .Site.Params.cover}}
 
   {{if not $coverImage}}
 	<header class="main-header tag-head no-cover">
@@ -23,7 +23,7 @@
        {{if $author.thumbnail}}
          <div class="author-cover-img" style="background-image: url({{$author.thumbnail}})"></div>
        {{end}}
-       <h1 class="page-title">{{$author.firstName}} {{$author.lastName}}</h1>
+       <h1 class="page-title">{{$author.firstname}} {{$author.lastname}}</h1>
       </div>
     </div>
   </header>
