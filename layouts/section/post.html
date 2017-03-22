@@ -20,7 +20,7 @@
       <section class="post-content">
         {{.Content}}
       </section>
-        {{$test := .Site.Pages.GroupBy "Section"}}
+        {{$test := .Data.Pages.GroupBy "Section"}}
 	{{range where $test "Key" "post"}}
 	  {{range .Pages.GroupByDate "2006" "desc"}}
           <section class="date-list">
