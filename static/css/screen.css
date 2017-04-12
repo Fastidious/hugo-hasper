@@ -385,7 +385,7 @@ pre code, pre tt {
     font-size: inherit;
     white-space: pre;
     overflow-wrap: normal;
-    overflow-x: scroll;
+    overflow-x: auto;
     background: transparent;
     border: none;
     padding: 0.5em;
